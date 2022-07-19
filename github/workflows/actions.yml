@@ -32,6 +32,6 @@ name: deploy
         - name: deploy to heroku
           uses: akhileshns/heroku-deploy@v3.12.12
           with:
-            heroku_api_key: ${a57b2381-f6b1-4549-be76-dc46d2483059}
+            heroku_api_key: a57b2381-f6b1-4549-be76-dc46d2483059
             heroku_app_name: "healthteam9"
             heroku_email: "rlarjsdn651@gmail.com"
