@@ -37,6 +37,6 @@ public class MachineController {
 
     @GetMapping("/{machineId}")
     public Machine getMachine(@PathVariable("machineId") Long machineId){
-
+        return machineService.getMachineid(machineId);
     }
 }

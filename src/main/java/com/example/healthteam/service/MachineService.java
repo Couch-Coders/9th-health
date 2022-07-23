@@ -23,4 +23,9 @@ public class MachineService {
         MachineCategory machineCategory = machineCategoryRepository.findById(categoryId).get();
         return machineRepository.findByMachineCategory(machineCategory);
     }
+
+    public Machine getMachineid(Long machineid){
+       return machineRepository.findById(machineid).get();
+
+    }
 }
