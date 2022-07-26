@@ -26,4 +26,8 @@ public class PostService {
      public List<Posting> getPosts() {
         return postRepository.findAll(); //모든 게시물 가져오기
      }
+
+     public Posting getPost(Long postId) {
+        return postRepository.findById(postId).get(); //postId를 통해 게시물 가져오기
+     }
 }

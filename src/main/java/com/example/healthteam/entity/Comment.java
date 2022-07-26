@@ -20,10 +20,8 @@ public class Comment {
     @Column(columnDefinition = "TEXT")
     String comment;
 
-
-
-
-
-
-
+    public Comment(String postId, String comment) {
+        this.postId = postId;
+        this.comment = comment;
+    }
 }

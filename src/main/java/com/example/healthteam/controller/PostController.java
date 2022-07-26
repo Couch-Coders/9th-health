@@ -23,4 +23,13 @@ public class PostController {
     public List<Posting> getPosts() {
         return postService.getPosts();
     }
+
+    @GetMapping("/{id}")
+    public Posting getPost(@PathVariable Long postId) { //{id} 값은 postId 변수에 저장됨
+        return postService.getPost(postId);
+    }
+
+    //@PutMapping("")
+
+    //@DeleteMapping("")
 }
