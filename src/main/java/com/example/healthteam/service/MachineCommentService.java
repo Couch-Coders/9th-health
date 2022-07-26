@@ -9,6 +9,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class MachineCommentService {
@@ -23,5 +25,12 @@ public class MachineCommentService {
                 createCommentRequest.getComment(), machine);
 
         return commentRepository.save(machineComment);
+    }
+
+    public List<MachineComment> getComment(Long machineId) {
+        //machineService에서 id를 통해 머신 게시글을 가져옴
+        Machine machine = machineService.getMachineid(machineId);
+
+        return commentRepository.findByMachine(machine);
     }
 }
