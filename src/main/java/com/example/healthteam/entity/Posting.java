@@ -19,6 +19,9 @@ public class Posting {
     @Column(columnDefinition = "TEXT")
     String post;
 
-
-
+    public Posting(String title, String content, String post) {
+        this.title = title;
+        this.content = content;
+        this.post = post;
+    }
 }
